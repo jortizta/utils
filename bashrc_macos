@@ -1,0 +1,50 @@
+alias machine1="ssh -X user@machine.host.edu"
+
+alias jupyrem='ssh -N -f -L localhost:8888:localhost:8889 jose@boreas.ucsd.edu|open -a safari http://localhost:8888'
+
+alias labrem='ssh -N -f -L localhost:8888:localhost:8889 jose@boreas.ucsd.edu|open -a safari http://localhost:8888'
+
+
+#current git branch
+#parse_git_branch() {
+#git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
+#}
+
+export CLICOLOR=1
+export LSCOLORS=Exfxcxdxbxegedabagacad
+alias ls='ls -GFh'
+alias ll='ls -lGaf'
+export GREP_OPTIONS='--color=auto'
+
+
+# added by Anaconda3 5.1.0 installer
+# export PATH="/Users/user/anaconda3/bin:$PATH"  # commented out by conda initialize
+
+alias matlabR2014a='/Applications/MATLAB_R2014a.app/bin/matlab'
+
+alias nteract='/Applications/nteract\ 2.app/Contents/MacOS/nteract'
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/opt/anaconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/opt/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/opt/anaconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/opt/anaconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
+
+#export PS1="\[\033[36m\]\u\[\033[m\]@\[\033[32m\]\h:\[\033[33;1m\]\W\[\033[m\]\$(parse_git_branch)\[\033[00m\] $ "
+
+export PS1="\[\033[36m\]\u\[\033[m\]@\[\033[32m\]\h:\[\033[33;1m\]\W\[\033[m\]\$ "
+
+export BASH_SILENCE_DEPRECATION_WARNING=1
+
+export WORK="/work/"
+

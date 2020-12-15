@@ -1,0 +1,6 @@
+# colors for the terminal
+set LS_OPTIONS="$LS_OPTIONS --color=auto"
+eval `dircolors ~/.dir_colors/dircolors`
+
+
+setenv MACHINE user@machine.institution.edu:
